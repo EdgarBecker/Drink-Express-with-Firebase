@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/home_topnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#DFFAD3"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/home_suche_ibtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/round_search_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        tools:listitem="@layout/homesuggestion_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/drink_express_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_topnavigation" />
+
+    <ProgressBar
+        android:id="@+id/home_progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DFFAD3">
+
+            <ImageView
+                android:id="@+id/notification_iv"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/round_circle_24"
+                app:layout_constraintBottom_toTopOf="@+id/homebotnav_Warenkorb_tv"
+                app:layout_constraintEnd_toEndOf="@+id/homebotnav_warenkorb_btn"
+                app:layout_constraintHorizontal_bias="0.62"
+                app:layout_constraintStart_toStartOf="@+id/homebotnav_warenkorb_btn"
+                app:layout_constraintTop_toTopOf="@+id/homebotnav_warenkorb_btn"
+                app:layout_constraintVertical_bias="0.18" />
+
+            <TextView
+                android:id="@+id/homebotnav_kategorie_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Kategorie"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/homebotnav_kategorie_btn"
+                app:layout_constraintStart_toStartOf="@+id/homebotnav_kategorie_btn"
+                app:layout_constraintTop_toBottomOf="@+id/homebotnav_kategorie_btn" />
+
+            <TextView
+                android:id="@+id/homebotnav_Warenkorb_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Warenkorb"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/homebotnav_warenkorb_btn"
+                app:layout_constraintStart_toStartOf="@+id/homebotnav_warenkorb_btn"
+                app:layout_constraintTop_toBottomOf="@+id/homebotnav_warenkorb_btn" />
+
+            <ImageButton
+                android:id="@+id/homebotnav_warenkorb_btn"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/outline_shopping_cart_24"
+                app:layout_constraintBottom_toTopOf="@+id/homebotnav_kategorie_tv"
+                app:layout_constraintEnd_toStartOf="@+id/homebotnav_profil_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/homebotnav_kategorie_btn"
+                app:layout_constraintTop_toTopOf="@+id/homebotnav_kategorie_btn" />
+
+            <ImageButton
+                android:id="@+id/homebotnav_kategorie_btn"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/outline_local_drink_24"
+                app:layout_constraintBottom_toBottomOf="@+id/homebotnav_home_btn"
+                app:layout_constraintEnd_toStartOf="@+id/homebotnav_warenkorb_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/homebotnav_home_btn"
+                app:layout_constraintTop_toTopOf="@+id/homebotnav_home_btn" />
+
+            <ImageButton
+                android:id="@+id/homebotnav_home_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/round_home_24"
+                app:layout_constraintEnd_toStartOf="@+id/homebotnav_kategorie_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/homebotnav_profil_btn"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/outline_person_24"
+                app:layout_constraintBottom_toTopOf="@+id/homebotnav_Warenkorb_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/homebotnav_warenkorb_btn"
+                app:layout_constraintTop_toTopOf="@+id/homebotnav_warenkorb_btn" />
+
+            <TextView
+                android:id="@+id/homebotnav_home_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/homebotnav_home_btn"
+                app:layout_constraintStart_toStartOf="@+id/homebotnav_home_btn"
+                app:layout_constraintTop_toBottomOf="@+id/homebotnav_home_btn" />
+
+            <TextView
+                android:id="@+id/homebotnav_profil_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Profil"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/homebotnav_profil_btn"
+                app:layout_constraintStart_toStartOf="@+id/homebotnav_profil_btn"
+                app:layout_constraintTop_toBottomOf="@+id/homebotnav_profil_btn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

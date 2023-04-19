@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SucheFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/suche_topnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#DFFAD3"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/suche_zurueck_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/round_chevron_left_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/suche_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/suche_topnavigation">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/suche_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Suchen" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/suche_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:text="Suche"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayout3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/suche_rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/cardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+        app:spanCount="2"
+        tools:listitem="@layout/drinkcardview_item" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DFFAD3">
+
+            <TextView
+                android:id="@+id/suchebotnav_kategorie_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Kategorie"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/suchebotnav_kategorie_btn"
+                app:layout_constraintStart_toStartOf="@+id/suchebotnav_kategorie_btn"
+                app:layout_constraintTop_toBottomOf="@+id/suchebotnav_kategorie_btn" />
+
+            <TextView
+                android:id="@+id/suchebotnav_Warenkorb_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Warenkorb"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/suchebotnav_warenkorb_btn"
+                app:layout_constraintStart_toStartOf="@+id/suchebotnav_warenkorb_btn"
+                app:layout_constraintTop_toBottomOf="@+id/suchebotnav_warenkorb_btn" />
+
+            <ImageView
+                android:id="@+id/notification_iv"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/round_circle_24"
+                app:layout_constraintBottom_toTopOf="@+id/suchebotnav_Warenkorb_tv"
+                app:layout_constraintEnd_toEndOf="@+id/suchebotnav_warenkorb_btn"
+                app:layout_constraintHorizontal_bias="0.62"
+                app:layout_constraintStart_toStartOf="@+id/suchebotnav_warenkorb_btn"
+                app:layout_constraintTop_toTopOf="@+id/suchebotnav_warenkorb_btn"
+                app:layout_constraintVertical_bias="0.18" />
+
+            <ImageButton
+                android:id="@+id/suchebotnav_warenkorb_btn"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/outline_shopping_cart_24"
+                app:layout_constraintBottom_toTopOf="@+id/suchebotnav_kategorie_tv"
+                app:layout_constraintEnd_toStartOf="@+id/suchebotnav_profil_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/suchebotnav_kategorie_btn"
+                app:layout_constraintTop_toTopOf="@+id/suchebotnav_kategorie_btn" />
+
+            <ImageButton
+                android:id="@+id/suchebotnav_kategorie_btn"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/outline_local_drink_24"
+                app:layout_constraintBottom_toBottomOf="@+id/suchebotnav_home_btn"
+                app:layout_constraintEnd_toStartOf="@+id/suchebotnav_warenkorb_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/suchebotnav_home_btn"
+                app:layout_constraintTop_toTopOf="@+id/suchebotnav_home_btn" />
+
+            <ImageButton
+                android:id="@+id/suchebotnav_home_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/outline_home_24"
+                app:layout_constraintEnd_toStartOf="@+id/suchebotnav_kategorie_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/suchebotnav_profil_btn"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/outline_person_24"
+                app:layout_constraintBottom_toTopOf="@+id/suchebotnav_Warenkorb_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/suchebotnav_warenkorb_btn"
+                app:layout_constraintTop_toTopOf="@+id/suchebotnav_warenkorb_btn" />
+
+            <TextView
+                android:id="@+id/suchebotnav_home_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/suchebotnav_home_btn"
+                app:layout_constraintStart_toStartOf="@+id/suchebotnav_home_btn"
+                app:layout_constraintTop_toBottomOf="@+id/suchebotnav_home_btn" />
+
+            <TextView
+                android:id="@+id/suchebotnav_profil_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Profil"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/suchebotnav_profil_btn"
+                app:layout_constraintStart_toStartOf="@+id/suchebotnav_profil_btn"
+                app:layout_constraintTop_toBottomOf="@+id/suchebotnav_profil_btn" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1094785190253",
+    "project_id": "drink-express-mallorca",
+    "storage_bucket": "drink-express-mallorca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094785190253:android:d68accef846a3c21553264",
+        "android_client_info": {
+          "package_name": "com.example.drink_express_mallorca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094785190253-kfe0a9n7h5hlip33j9rsbdu11133tph9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyeWOIR30c9Kowl6XJ4sKsYz_T1D3byEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1094785190253-kfe0a9n7h5hlip33j9rsbdu11133tph9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

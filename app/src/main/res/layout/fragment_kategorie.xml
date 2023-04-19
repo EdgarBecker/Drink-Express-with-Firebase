@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.KategorieFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/kategorie_topnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#DFFAD3"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/kategorie_zurueck_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/round_chevron_left_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/kategorie_suche_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/round_search_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Kategorien"
+        android:textColor="@color/home_green"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kategorie_topnavigation" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/kat_alkoholfrei_btn"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/white"
+                android:text="Alkoholfrei"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="0.8dp" />
+
+            <Button
+                android:id="@+id/kat_alkohol_btn"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/white"
+                android:text="Alkohol"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kat_alkoholfrei_btn"
+                app:strokeWidth="0.8dp" />
+
+            <Button
+                android:id="@+id/kat_cocktail_btn"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/white"
+                android:text="Cocktail"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kat_alkohol_btn"
+                app:strokeWidth="0.8dp" />
+
+            <Button
+                android:id="@+id/kat_getränke_btn"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/white"
+                android:text="getränke"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kat_cocktail_btn"
+                app:strokeWidth="0.8dp" />
+
+            <Button
+                android:id="@+id/kat_champagneFlute_btn"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/white"
+                android:text="Champagne Flute"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kat_getränke_btn"
+                app:strokeWidth="0.8dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DFFAD3">
+
+            <TextView
+                android:id="@+id/kategoriebotnav_kategorie_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Kategorie"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/kategoriebotnav_kategorie_btn"
+                app:layout_constraintStart_toStartOf="@+id/kategoriebotnav_kategorie_btn"
+                app:layout_constraintTop_toBottomOf="@+id/kategoriebotnav_kategorie_btn" />
+
+            <TextView
+                android:id="@+id/kategoriebotnav_Warenkorb_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Warenkorb"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/kategoriebotnav_warenkorb_btn"
+                app:layout_constraintStart_toStartOf="@+id/kategoriebotnav_warenkorb_btn"
+                app:layout_constraintTop_toBottomOf="@+id/kategoriebotnav_warenkorb_btn" />
+
+            <ImageView
+                android:id="@+id/notification_iv"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/round_circle_24"
+                app:layout_constraintBottom_toTopOf="@+id/kategoriebotnav_Warenkorb_tv"
+                app:layout_constraintEnd_toEndOf="@+id/kategoriebotnav_warenkorb_btn"
+                app:layout_constraintHorizontal_bias="0.62"
+                app:layout_constraintStart_toStartOf="@+id/kategoriebotnav_warenkorb_btn"
+                app:layout_constraintTop_toTopOf="@+id/kategoriebotnav_warenkorb_btn"
+                app:layout_constraintVertical_bias="0.18" />
+
+            <ImageButton
+                android:id="@+id/kategoriebotnav_warenkorb_btn"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/outline_shopping_cart_24"
+                app:layout_constraintBottom_toTopOf="@+id/kategoriebotnav_kategorie_tv"
+                app:layout_constraintEnd_toStartOf="@+id/kategoriebotnav_profil_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/kategoriebotnav_kategorie_btn"
+                app:layout_constraintTop_toTopOf="@+id/kategoriebotnav_kategorie_btn" />
+
+            <ImageButton
+                android:id="@+id/kategoriebotnav_kategorie_btn"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/round_local_drink_24"
+                app:layout_constraintBottom_toBottomOf="@+id/kategoriebotnav_home_btn"
+                app:layout_constraintEnd_toStartOf="@+id/kategoriebotnav_warenkorb_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/kategoriebotnav_home_btn"
+                app:layout_constraintTop_toTopOf="@+id/kategoriebotnav_home_btn" />
+
+            <ImageButton
+                android:id="@+id/kategoriebotnav_home_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/outline_home_24"
+                app:layout_constraintEnd_toStartOf="@+id/kategoriebotnav_kategorie_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/kategoriebotnav_profil_btn"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/outline_person_24"
+                app:layout_constraintBottom_toTopOf="@+id/kategoriebotnav_Warenkorb_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/kategoriebotnav_warenkorb_btn"
+                app:layout_constraintTop_toTopOf="@+id/kategoriebotnav_warenkorb_btn" />
+
+            <TextView
+                android:id="@+id/kategoriebotnav_home_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/kategoriebotnav_home_btn"
+                app:layout_constraintStart_toStartOf="@+id/kategoriebotnav_home_btn"
+                app:layout_constraintTop_toBottomOf="@+id/kategoriebotnav_home_btn" />
+
+            <TextView
+                android:id="@+id/kategoriebotnav_profil_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Profil"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/kategoriebotnav_profil_btn"
+                app:layout_constraintStart_toStartOf="@+id/kategoriebotnav_profil_btn"
+                app:layout_constraintTop_toBottomOf="@+id/kategoriebotnav_profil_btn" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

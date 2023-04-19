@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.drink_express_mallorca.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/login_screen"
+        android:name="com.example.drink_express_mallorca.ui.Login_screen"
+        android:label="login_screen"
+        tools:layout="@layout/log_in_screen">
+        <action
+            android:id="@+id/action_login_screen_to_registrierenFragment"
+            app:destination="@id/registrierenFragment" />
+        <action
+            android:id="@+id/action_login_screen_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrierenFragment"
+        android:name="com.example.drink_express_mallorca.ui.RegistrierenFragment"
+        android:label="fragment_registrieren"
+        tools:layout="@layout/fragment_registrieren" >
+        <action
+            android:id="@+id/action_registrierenFragment_to_login_screen"
+            app:destination="@id/login_screen" />
+        <action
+            android:id="@+id/action_registrierenFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.drink_express_mallorca.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_sucheFragment"
+            app:destination="@id/sucheFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_kategorieFragment"
+            app:destination="@id/kategorieFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_warenkorbFragment"
+            app:destination="@id/warenkorbFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profilFragment"
+            app:destination="@id/profilFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_login_screen"
+            app:destination="@id/login_screen" />
+    </fragment>
+    <fragment
+        android:id="@+id/kategorieFragment"
+        android:name="com.example.drink_express_mallorca.ui.KategorieFragment"
+        android:label="fragment_kategorie"
+        tools:layout="@layout/fragment_kategorie" >
+        <action
+            android:id="@+id/action_kategorieFragment_to_kategorieWahlFragment"
+            app:destination="@id/kategorieWahlFragment" />
+        <action
+            android:id="@+id/action_kategorieFragment_to_sucheFragment"
+            app:destination="@id/sucheFragment" />
+        <action
+            android:id="@+id/action_kategorieFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_kategorieFragment_to_sucheFragment2"
+            app:destination="@id/sucheFragment" />
+        <action
+            android:id="@+id/action_kategorieFragment_to_warenkorbFragment"
+            app:destination="@id/warenkorbFragment" />
+        <action
+            android:id="@+id/action_kategorieFragment_to_profilFragment"
+            app:destination="@id/profilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/warenkorbFragment"
+        android:name="com.example.drink_express_mallorca.ui.WarenkorbFragment"
+        android:label="fragment_warenkorb"
+        tools:layout="@layout/fragment_warenkorb" >
+        <action
+            android:id="@+id/action_warenkorbFragment_to_sucheFragment"
+            app:destination="@id/sucheFragment" />
+        <action
+            android:id="@+id/action_warenkorbFragment_to_adresseFragment"
+            app:destination="@id/adresseFragment" />
+        <action
+            android:id="@+id/action_warenkorbFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_warenkorbFragment_to_sucheFragment2"
+            app:destination="@id/sucheFragment" />
+        <action
+            android:id="@+id/action_warenkorbFragment_to_kategorieFragment"
+            app:destination="@id/kategorieFragment" />
+        <action
+            android:id="@+id/action_warenkorbFragment_to_profilFragment"
+            app:destination="@id/profilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.example.drink_express_mallorca.ui.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" >
+        <action
+            android:id="@+id/action_profilFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_profilFragment_to_sucheFragment"
+            app:destination="@id/sucheFragment" />
+        <action
+            android:id="@+id/action_profilFragment_to_kategorieFragment"
+            app:destination="@id/kategorieFragment" />
+        <action
+            android:id="@+id/action_profilFragment_to_warenkorbFragment"
+            app:destination="@id/warenkorbFragment" />
+        <action
+            android:id="@+id/action_profilFragment_to_login_screen"
+            app:destination="@id/login_screen" />
+    </fragment>
+    <fragment
+        android:id="@+id/sucheFragment"
+        android:name="com.example.drink_express_mallorca.ui.SucheFragment"
+        android:label="fragment_suche"
+        tools:layout="@layout/fragment_suche" >
+        <action
+            android:id="@+id/action_sucheFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_sucheFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_sucheFragment_to_kategorieFragment"
+            app:destination="@id/kategorieFragment" />
+        <action
+            android:id="@+id/action_sucheFragment_to_warenkorbFragment"
+            app:destination="@id/warenkorbFragment" />
+        <action
+            android:id="@+id/action_sucheFragment_to_profilFragment"
+            app:destination="@id/profilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.drink_express_mallorca.ui.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="getränk"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailFragment_to_sucheFragment"
+            app:destination="@id/sucheFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_kategorieFragment"
+            app:destination="@id/kategorieFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_warenkorbFragment"
+            app:destination="@id/warenkorbFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_profilFragment"
+            app:destination="@id/profilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kategorieWahlFragment"
+        android:name="com.example.drink_express_mallorca.ui.KategorieWahlFragment"
+        android:label="fragment_kategorie_wahl"
+        tools:layout="@layout/fragment_kategorie_wahl" >
+        <argument
+            android:name="UI"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_kategorieWahlFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_kategorieWahlFragment_to_sucheFragment"
+            app:destination="@id/sucheFragment" />
+        <action
+            android:id="@+id/action_kategorieWahlFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_kategorieWahlFragment_to_warenkorbFragment"
+            app:destination="@id/warenkorbFragment" />
+        <action
+            android:id="@+id/action_kategorieWahlFragment_to_profilFragment"
+            app:destination="@id/profilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adresseFragment"
+        android:name="com.example.drink_express_mallorca.ui.AdresseFragment"
+        android:label="fragment_adresse"
+        tools:layout="@layout/fragment_adresse" >
+        <action
+            android:id="@+id/action_adresseFragment_to_bestaetigtFragment"
+            app:destination="@id/bestaetigtFragment" />
+        <action
+            android:id="@+id/action_adresseFragment_to_warenkorbFragment"
+            app:destination="@id/warenkorbFragment" />
+        <action
+            android:id="@+id/action_adresseFragment_to_sucheFragment"
+            app:destination="@id/sucheFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bestaetigtFragment"
+        android:name="com.example.drink_express_mallorca.ui.BestaetigtFragment"
+        android:label="fragment_bestaetigt"
+        tools:layout="@layout/fragment_bestaetigt" >
+        <action
+            android:id="@+id/action_bestaetigtFragment_to_warenkorbFragment"
+            app:destination="@id/warenkorbFragment" />
+        <action
+            android:id="@+id/action_bestaetigtFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
